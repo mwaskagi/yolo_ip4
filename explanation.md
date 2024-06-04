@@ -22,14 +22,14 @@
 - `Persistent Volume Claim`
   - I created a deployment yaml file for database data persistence.I mapped this on mongo db deployment and a volume.
 - I setup [GCLI(Google Cloud CLI)](https://cloud.google.com/sdk/docs/install-sdk)
--  After setting up Google SDK CLI,create a kubernetes cluster on GKE
+- Enable APis 
+   ```
+   gcloud services enable containerregistry.googleapis.com container.googleapis.com
+
+   ```
+-  Areate a kubernetes cluster on GKE
     ```
-    gcloud container clusters create week8-ip4 --num-nodes=3
-    ```
--  I connected to the cluster:
-  
-    ```
-    gcloud container clusters get-credentials week8-ip4 --zone us-central1-a
+    gcloud container clusters create yolo-app --num-nodes=3 --zone us-central1-a
     ```
 - I applied the deployment files using kubectl.
     ```
